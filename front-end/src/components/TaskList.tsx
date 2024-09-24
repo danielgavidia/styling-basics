@@ -18,7 +18,7 @@ const TaskList: React.FC<iTaskList> = ({ data }) => {
 
     const handleSetTaskComplete = (id: number): void => {
         const task = tasks.filter((x) => x.id === id)[0];
-        const taskFinal = { ...task, completion: true };
+        const taskFinal = { ...task, completion: !task.completion };
         const newTasks = tasks.map((x) => {
             if (x.id === id) {
                 return taskFinal;
@@ -36,7 +36,6 @@ const TaskList: React.FC<iTaskList> = ({ data }) => {
 
     return (
         <div className="bg-white h-screen">
-            <div className="text-lg text-black p-2">Task List</div>
             <div>
                 {tasks.map((x, id) => {
                     return (
