@@ -1,13 +1,13 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Root from "./routes/Root";
-import Task from "./routes/Task";
-import TaskList from "./routes/TaskList";
-import MessageThread from "./routes/MessageThread";
-import Post from "./routes/Post";
-import HeatGrid from "./routes/HeatGrid";
-import TabDescriptor from "./routes/TabDescriptor";
+import Root from "./Root";
+import RouteTask from "./routes/RouteTask";
+import RouteTaskList from "./routes/RouteTaskList";
+import RouteMessageThread from "./routes/RouteMessageThread";
+import RoutePost from "./routes/RoutePost";
+import RouteHeatGrid from "./routes/RouteHeatGrid";
+import RouteTabDescriptor from "./routes/RouteTabDescriptor";
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -15,12 +15,12 @@ const router = createBrowserRouter([
         path: "/",
         element: <Root />,
         children: [
-            { path: "task/", element: <Task /> },
-            { path: "taskList/", element: <TaskList /> },
-            { path: "messageThread/", element: <MessageThread /> },
-            { path: "post/", element: <Post /> },
-            { path: "heatGrid/", element: <HeatGrid /> },
-            { path: "tabDescriptor/", element: <TabDescriptor /> },
+            { path: "RouteTask/", element: <RouteTask /> },
+            { path: "RouteTaskList/", element: <RouteTaskList /> },
+            { path: "RouteMessageThread/", element: <RouteMessageThread /> },
+            { path: "RoutePost/", element: <RoutePost /> },
+            { path: "RouteHeatGrid/", element: <RouteHeatGrid /> },
+            { path: "RouteTabDescriptor/", element: <RouteTabDescriptor /> },
         ],
     },
 ]);

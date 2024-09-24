@@ -1,9 +1,9 @@
-const Post = () => {
+const RoutePost = () => {
     return (
-        <div id="post">
+        <div id="RoutePost">
             <div className="bg-white">Post</div>
         </div>
     );
 };
 
-export default Post;
+export default RoutePost;
