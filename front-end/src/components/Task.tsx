@@ -1,21 +1,24 @@
 interface iTask {
+    id: number;
     title: string;
     description: string;
     completion: boolean;
-    handleSetTaskComplete: () => void;
+    handleSetTaskComplete: (id: number) => void;
 }
 
 const Task: React.FC<iTask> = ({
+    id,
     title,
     description,
     completion,
     handleSetTaskComplete,
 }) => {
     const checkboxStyles = completion ? "bg-green-700" : "bg-white";
-
     const taskFalse = "flex flex-row border-2 border-gray rounded-lg p-2";
     const taskTrue =
         "flex flex-row border-2 border-gray rounded-lg p-2 bg-green-100";
+
+    console.log(`complete: ${completion}`);
 
     return (
         <div className="p-2">
@@ -28,7 +31,7 @@ const Task: React.FC<iTask> = ({
                             checkboxStyles
                         }
                         // checked={completion}
-                        onChange={() => handleSetTaskComplete()}
+                        onChange={() => handleSetTaskComplete(id)}
                     />
                 </div>
                 <div className="basis-5/6">
