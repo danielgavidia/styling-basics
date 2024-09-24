@@ -22,8 +22,8 @@ const Post: React.FC<iPost> = ({
     countComments,
 }) => {
     return (
-        <div className="flex py-10">
-            <div className="h-4/6 w-4/6 rounded-full p-2">
+        <div className="flex py-10 justify-center">
+            <div className="h-20 w-20 rounded-full p-2">
                 <img src={userImage} alt="userImage" className="rounded-full" />
             </div>
             <div className="p-2">
@@ -35,7 +35,12 @@ const Post: React.FC<iPost> = ({
                 </div>
                 <div className="px-2 font-light">3 min ago</div>
                 <div className="p-2">
-                    <img src={postImage} alt="postImage" />
+                    <img
+                        src={postImage}
+                        alt="postImage"
+                        className="aspect-square object-cover h-80 w-80"
+                        // className="aspect-square object-cover"
+                    />
                 </div>
                 <div className="p-2 text-black text-lg">{postDescription}</div>
                 <div className="p-2 flex">
