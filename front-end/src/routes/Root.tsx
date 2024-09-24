@@ -1,30 +1,32 @@
 import { Outlet } from "react-router-dom";
 
 const Root = () => {
+    const arr = [
+        { path: "/task", name: "Task" },
+        { path: "/taskList", name: "Task List" },
+        { path: "/messageThread", name: "Message Thread" },
+        { path: "/post", name: "Post" },
+        { path: "/heatGrid", name: "Heat Grid" },
+        { path: "/tabDescriptor", name: "Tab Descriptor" },
+    ];
     return (
         <>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="/task">Task</a>
-                    </li>
-                    <li>
-                        <a href="/taskList">Task List</a>
-                    </li>
-                    <li>
-                        <a href="/messageThread">Message Thread</a>
-                    </li>
-                    <li>
-                        <a href="/post">Post</a>
-                    </li>
-                    <li>
-                        <a href="/heatGrid">Heat Grid</a>
-                    </li>
-                    <li>
-                        <a href="/tabDescriptor">Tab Descriptor</a>
-                    </li>
-                </ul>
-            </nav>
+            <div className="navbar sticky top-0 z-50">
+                <div className="flex-1">
+                    <a className="btn btn-ghost text-xl">Styling Basics</a>
+                </div>
+                <div className="flex-none">
+                    <ul className="menu menu-horizontal px-1">
+                        {arr.map((x, id) => {
+                            return (
+                                <li key={id}>
+                                    <a href={x.path}>{x.name}</a>
+                                </li>
+                            );
+                        })}
+                    </ul>
+                </div>
+            </div>
             <div id="detail">
                 <Outlet />
             </div>
