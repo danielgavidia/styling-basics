@@ -11,15 +11,15 @@ const Root = () => {
     ];
     return (
         <>
-            <div className="navbar sticky top-0 z-50">
-                <div className="flex-1">
-                    <a className="btn btn-ghost text-xl">Styling Basics</a>
+            <div className="flex sticky top-0 z-50 justify-between">
+                <div className="flex">
+                    <a className="text-xl p-2">Styling Basics</a>
                 </div>
                 <div className="flex-none">
-                    <ul className="menu menu-horizontal px-1">
+                    <ul className="flex">
                         {arr.map((x, id) => {
                             return (
-                                <li key={id}>
+                                <li key={id} className="p-2">
                                     <a href={x.path}>{x.name}</a>
                                 </li>
                             );
