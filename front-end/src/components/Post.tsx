@@ -39,7 +39,6 @@ const Post: React.FC<iPost> = ({
                         src={postImage}
                         alt="postImage"
                         className="aspect-square object-cover h-80 w-80"
-                        // className="aspect-square object-cover"
                     />
                 </div>
                 <div className="p-2 text-black text-lg">{postDescription}</div>
