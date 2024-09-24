@@ -13,31 +13,35 @@ const Task: React.FC<iTask> = ({
     completion,
     handleSetTaskComplete,
 }) => {
-    const checkboxStyles = completion ? "bg-green-700" : "bg-white";
-    const taskFalse = "flex flex-row border-2 border-gray rounded-lg p-2";
-    const taskTrue =
-        "flex flex-row border-2 border-gray rounded-lg p-2 bg-green-100";
-
-    console.log(`complete: ${completion}`);
+    const stylesCheckbox = completion ? "bg-green-700" : "bg-white";
+    const stylesTask = completion ? "bg-green-100" : "bg-white";
 
     return (
         <div className="p-2">
-            <div className={completion ? taskTrue : taskFalse}>
+            <div
+                className={
+                    "flex flex-row border-2 border-gray rounded-lg p-2 " +
+                    stylesTask
+                }
+            >
+                {/* checkbox */}
                 <div className="w-20 flex justify-center items-center">
                     <input
                         type="checkbox"
                         className={
                             "appearance-none w-6 h-6 border border-gray-300 rounded-lg " +
-                            checkboxStyles
+                            stylesCheckbox
                         }
-                        // checked={completion}
                         onChange={() => handleSetTaskComplete(id)}
                     />
                 </div>
+                {/* body */}
                 <div className="basis-5/6">
+                    {/* title */}
                     <div className="text-lg font-medium text-black">
                         {title}
                     </div>
+                    {/* description */}
                     <div className="text-sm font-light">{description}</div>
                 </div>
             </div>
