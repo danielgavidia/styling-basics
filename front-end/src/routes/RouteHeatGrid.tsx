@@ -1,9 +1,9 @@
-const HeatGrid = () => {
+const RouteHeatGrid = () => {
     return (
-        <div id="heatGrid">
+        <div id="RouteHeatGrid">
             <div className="bg-white">Heat Grid</div>
         </div>
     );
 };
 
-export default HeatGrid;
+export default RouteHeatGrid;

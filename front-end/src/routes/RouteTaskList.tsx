@@ -1,9 +1,9 @@
-const TaskList = () => {
+const RTaskList = () => {
     return (
-        <div id="taskList">
+        <div id="RTaskList">
             <div className="bg-white">Task List</div>
         </div>
     );
 };
 
-export default TaskList;
+export default RTaskList;

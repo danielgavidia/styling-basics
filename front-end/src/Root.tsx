@@ -2,16 +2,16 @@ import { Outlet } from "react-router-dom";
 
 const Root = () => {
     const arr = [
-        { path: "/task", name: "Task" },
-        { path: "/taskList", name: "Task List" },
-        { path: "/messageThread", name: "Message Thread" },
-        { path: "/post", name: "Post" },
-        { path: "/heatGrid", name: "Heat Grid" },
-        { path: "/tabDescriptor", name: "Tab Descriptor" },
+        { path: "/RouteTask", name: "Task" },
+        { path: "/RouteTaskList", name: "Task List" },
+        { path: "/RouteMessageThread", name: "Message Thread" },
+        { path: "/RoutePost", name: "Post" },
+        { path: "/RouteHeatGrid", name: "Heat Grid" },
+        { path: "/RouteTabDescriptor", name: "Tab Descriptor" },
     ];
     return (
         <>
-            <div className="flex sticky top-0 z-50 justify-between">
+            <div className="flex sticky top-0 z-50 justify-between bg-neutral">
                 <div className="flex">
                     <a className="text-xl p-2">Styling Basics</a>
                 </div>
